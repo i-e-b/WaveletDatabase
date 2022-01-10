@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaveletDatabase", "WaveletDatabase\WaveletDatabase.csproj", "{D88E1DC6-8E1D-49C3-80A9-68DCCB49745A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaveletDatabaseTests", "WaveletDatabaseTests\WaveletDatabaseTests.csproj", "{7D9374B7-6111-4051-9602-B9E571D2D62D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Info", "_Info", "{27F8C163-A9DB-45A3-B3ED-A0815CC59B7C}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D88E1DC6-8E1D-49C3-80A9-68DCCB49745A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D88E1DC6-8E1D-49C3-80A9-68DCCB49745A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D88E1DC6-8E1D-49C3-80A9-68DCCB49745A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D88E1DC6-8E1D-49C3-80A9-68DCCB49745A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D9374B7-6111-4051-9602-B9E571D2D62D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D9374B7-6111-4051-9602-B9E571D2D62D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D9374B7-6111-4051-9602-B9E571D2D62D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D9374B7-6111-4051-9602-B9E571D2D62D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
