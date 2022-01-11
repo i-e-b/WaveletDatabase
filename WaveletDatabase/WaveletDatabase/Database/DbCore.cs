@@ -1,6 +1,6 @@
 ﻿namespace WaveletDatabase.Database;
 
-public class DbCore<TSum, TValue>
+public class DbCore<TSum, TValue> where TSum : IAggregateValue
 {
     private readonly int _pyramidHeight;
     private readonly IAggregation<TSum, TValue> _aggregate;
@@ -63,12 +63,29 @@ public class DbCore<TSum, TValue>
         
         return result;
     }
+
+    public List<BucketEntry<TValue>> FindInRange(int startPosition, int endPosition, TSum valueRange)
+    {
+        throw new NotImplementedException();
+    }
+}
+
+public class BucketEntry<TValue>
+{
+    public BucketEntry(TValue value, object? log)
+    {
+        Value = value;
+        Log = log;
+    }
+
+    public TValue Value { get; set; }
+    public object? Log { get; set; }
 }
 
 /// <summary>
 /// A single stack of values
 /// </summary>
-internal class Pyramid<TSum, TValue>
+internal class Pyramid<TSum, TValue> where TSum : IAggregateValue
 {
     private readonly int _width;
     private readonly int _height;
@@ -140,14 +157,14 @@ internal class Pyramid<TSum, TValue>
 
 internal class Bucket<TValue>
 {
-    private readonly List<Tuple<TValue, object?>> _allValues;
+    private readonly List<BucketEntry<TValue>> _allValues;
     public Bucket()
     {
-        _allValues = new List<Tuple<TValue, object?>>();
+        _allValues = new List<BucketEntry<TValue>>();
     }
 
     public void Add(TValue value, object? log)
     {
-        _allValues.Add(new Tuple<TValue, object?>(value, log));
+        _allValues.Add(new BucketEntry<TValue>(value, log));
     }
 }
